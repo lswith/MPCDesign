@@ -1,0 +1,7 @@
+ 1    2  3  4  5   6   7   8   9   10  11  12
+---------------------------------------------
+step  u  y  s  sf  a0  a1  a2  b0  b1  b2  b3
+
+kst2 out.dat -x 1 -P P1 -y 2 -P P2 -y 3 -y 5 -P P3 -y 7 -y 8 -P P4 -y 10 -y 11 -y 12
+
+dmesg | grep disp | grep -o -E "[0-9]+ .*" > out.dat

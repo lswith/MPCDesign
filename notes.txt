@@ -1,0 +1,13 @@
+Common Commands:
+*stops and starts the rtai modules*(make sure to add rtai_math.ko to this file as well)
+sudo /etc/init.d/rtailab start
+sudo /etc/init.d/rtailab stop
+
+*displays kernel messages (-c clears)*
+sudo dmesg
+
+Things To Do:
+- convert to real-time application
+- allow for parameter changes
+- allow for actual set points to be inputted
+- 

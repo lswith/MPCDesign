@@ -1,0 +1,16 @@
+#!/bin/bash
+
+if [[ "$1" == start ]]
+then
+    sudo insmod mpc.ko
+    gnome-terminal -x ./setpoint
+    gnome-terminal -x ./display
+    kst2 out.dat -n 200 -x 1 -P P1 -y 2 -P P2 -y 3 -y 5 -P P3 -y 7 -y 8 -y 9 -y 10 -y 11 -y 12 -y 13 &
+elif [[ "$1" == stop ]]
+then
+    sudo rmmod mpc.ko
+    killall kst2
+else
+    echo "usage: run start or run stop"
+fi
+exit 0
